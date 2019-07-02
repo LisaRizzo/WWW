@@ -1,0 +1,123 @@
+﻿
+body {
+    height: auto;
+    margin: 0px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+td, th{
+    border: 1px solid gray;
+    width: 33%;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 90px 250px 250px auto auto auto;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-template-areas: "AQI AQI AQI AQI" 
+                        "map map future future"
+                        "map map future future"
+                        "weather weather future future"
+                        "weather weather recommend recommend"
+                        "weather weather recommend recommend"
+                        "weather weather VOC VOC"
+
+}
+col:nth-child(2n+3) {
+    background: #CCC;
+}
+
+#forecast {
+    width: 100%;
+    text-align: center;
+}
+
+
+#welcome {
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+    width: 100%;
+}
+#flexBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content:center;
+    height: auto;
+}
+
+#indexMap {
+    height: 300px;
+    width: 400px;
+}
+
+#video {
+    width: 800px;
+    height: 460px;
+    margin: auto;
+}
+.flexItem {
+    width: 800px;
+    height: auto;
+}
+
+img{
+    width: 100%;
+    margin: auto;
+}
+
+.map {
+    grid-area: map;
+}
+
+#map {
+    height: 400px;
+    margin: auto;
+    width: 555px;
+}
+
+.AQI {
+    grid-area: AQI;
+    height: auto;
+}
+
+.weather {
+    grid-area: weather;
+}
+
+.futureAQI {
+    grid-area: future;
+}
+
+.otherPollutants {
+    grid-area: other;
+}
+
+.recommendations {
+    grid-area: recommend;
+}
+
+.VOC {
+    grid-area: VOC;
+    margin-top:25px;
+}
+
+.header {
+    text-align: center;
+}
+
+.submit {
+    width: 600px;
+    margin: 20px 0px 20px 0px;
+}
